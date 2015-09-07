@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<script>
+function checkIt(){
+	var byGetElementByID = document.getElementById('bar');
+	alert(byGetElementByID.value);
+	var byQuerySelector = document.querySelector('#bar');
+	alert(byQuerySelector.value);
+	var byQuerySelectorAll = document.querySelectorAll('#bar');
+	alert('There are: ' + byQuerySelectorAll.length + ' elements with the ID "bar"');
+	alert(byQuerySelectorAll[0].value);
+}
+</script>
+</head>
+<body onload="checkIt();">
+<form name="foo">
+	<input type="text" name="bar" id="bar" value="a"/><br/>
+	<input type="text" name="bar" id="bar" value="b"/><br/>
+	<input type="text" name="bar" id="bar" value="c"/><br/>
+	<input type="text" name="bar" id="bar" value="d"/><br/>
+	<input type="text" name="bar" id="bar" value="e"/><br/>
+	<input type="text" name="bar" id="bar" value="f"/><br/>
+	<input type="text" name="bar" id="bar" value="g"/><br/>
+</form>
+<p>All of the input fields above have an <tt>id</tt> of <tt>bar</tt> which is invalid.  Does the browser return the first? last? or which when asking for the element by ID.</p>
+</body>
+</html>
