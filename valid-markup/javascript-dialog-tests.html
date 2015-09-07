@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+	<title>Simple JavaScript Dialog Tests</title>
+</head>
+<body>
+	<input type="button" value="Alert" onclick="alert('Hello\nWorld!');"/>
+	<input type="button" value="Confirm" onclick="confirm('Hello\nWorld!');"/>
+	<input type="button" value="Prompt" onclick="prompt('Hello\nWorld!','Default Value');"/>
+	<input type="button" value="Prompt (long message)" onclick="prompt('Hello\nWorld!\nThis is the 3rd line.\nThis is the 4th line.\nThis is the 5th line.','Default Value');"/>
+	<input type="button" value="Print" onclick="print();"/>
+</body>
+<p>All of these basic dialogs should work regardless of platform.
+<br/>
+Notes:
+<br/>
+<ol>
+	<li>On "Metro Mode" IE11 browser on Windows 8/8.1 the Prompt dialog does not execute.</li>
+	<li>On IE 6,7,8,9,10,11 the Prompt dialog in Internet Explorer will not show more than 3 lines of message text, and fails to render certain character sets</li>
+</ol>
+</p>
+</html>
