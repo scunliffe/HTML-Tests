@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+	<title>Tables with broken TD elements</title>
+</head>
+<body>
+	<p>Missing closing <tt>&gt;</tt> angled bracket of opening <tt>td</tt> tag.</p>
+	<table width="100%" cellspacing="0" cellpadding="3" colspan="2" border="1">
+		<tr>
+			<td width="3%"</td>
+			<td width="40%"</td>
+		</tr>
+		<tr>
+			<td>hello</td>
+			<td>world</td>
+		</tr>
+	</table>
+	<br/>
+	<p>Correctly structured table.</p>
+	<table width="100%" cellspacing="0" cellpadding="3" colspan="2" border="1">
+		<tr>
+			<td width="3%">a</td>
+			<td width="40%">b</td>
+		</tr>
+		<tr>
+			<td>hello</td>
+			<td>world</td>
+		</tr>
+	</table>
+	<br/>
+	<p>Missing closing <tt>&lt;/td&gt;</tt> tags.</p>
+	<table width="100%" cellspacing="0" cellpadding="3" colspan="2" border="1">
+		<tr>
+			<td width="3%">a
+			<td width="40%">b
+		</tr>
+		<tr>
+			<td>hello</td>
+			<td>world</td>
+		</tr>
+	</table>
+	<br/>
+	<p>Missing closing <tt>&gt;</tt> angled bracket of opening <tt>td</tt> tag <b>AND</b> closing <tt>&lt;/td&gt;</tt> tags.</p>
+	<table width="100%" cellspacing="0" cellpadding="3" colspan="2" border="1">
+		<tr>
+			<td width="3%"a
+			<td width="40%"b
+		</tr>
+		<tr>
+			<td>hello</td>
+			<td>world</td>
+		</tr>
+	</table>
+</body>
+</html>
